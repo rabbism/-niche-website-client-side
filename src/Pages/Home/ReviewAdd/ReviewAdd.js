@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form"
 import ReactStars from "react-rating-stars-component";
 
 const ReviewAdd = () => {
-    const { register, handleSubmit,setValue  } = useForm();
+   
+    const { register, handleSubmit,reset } = useForm();
 
     const thirdExample = {
         size: 40,
@@ -13,20 +14,25 @@ const ReviewAdd = () => {
         color: "blue",
         activeColor: "red",
         onblur: newValue => {
-            setValue(newValue)
+            
         }
       };
 
 
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data);
+        reset()
+    }
     return (
         <div>
-            <div>
+            <div className='mt-5 w-50 m-auto'>
+                <h2>Submit Your Review</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <textarea {...register("firstName", { required: true, maxLength: 20 })} />
-                <ReactStars {...thirdExample} />
+                <br></br>
                 <input type="submit" />
             </form>
+            <ReactStars {...thirdExample} />
             </div>
         </div>
     );

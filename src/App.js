@@ -6,6 +6,7 @@ import Admin from './Pages/Admin/Admin/Admin';
 import MakeAdmin from './Pages/Admin/MakeAdmin/MakeAdmin';
 import NavBar from './Pages/Home/NavBar/NavBar';
 import ReviewAdd from './Pages/Home/ReviewAdd/ReviewAdd';
+import Explor from './Pages/Explor/Explor/Explor';
 
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route exact path='/review'>
             <ReviewAdd></ReviewAdd>
+        </Route>
+        <Route exact path='/explor'>
+          <Explor></Explor>
         </Route>
       </Switch>
     </Router>
