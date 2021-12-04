@@ -1,8 +1,9 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
+import useAuth from './../../../Hook/useAuth';
 
 const PrivetRouter = ({ children, ...rest }) => {
-    const {user,loading} =useAuth()
+    const {user} =useAuth
     return (
         <Route
             {...rest}

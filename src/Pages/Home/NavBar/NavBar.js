@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css'
 import logo from '../../../images/logo.png'
+import useAuth from '../../../Hook/useAuth';
 
 const NavBar = () => {
+  const {user,logOut} =useAuth()
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark  style-nav p-4">
@@ -23,10 +25,22 @@ const NavBar = () => {
           <Link className="nav-link" to="/explor">Explor</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="#">About</Link>
+          <Link className="nav-link" to="/about">About</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/review">Review</Link>
+          {
+            user.email && <Link className="nav-link" to="/review">My Order</Link>
+          }
+        </li>
+        <li className="nav-item">
+          {
+            user.email && <Link className="nav-link" to="/review">Payment</Link>
+          }
+        </li>
+        <li className="nav-item">
+          {
+            user.email  && <Link className="nav-link" to="/review">Review</Link>
+          }
         </li>
         <li className="nav-item dropdown">
           <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,6 +56,12 @@ const NavBar = () => {
             <li><Link className="dropdown-item" to="#">Log Out</Link></li>
             
           </ul>
+          <li className="nav-item ">
+          {user.email || user.displayName ? <button onClick={logOut} className='btn btn-primary mt-1'>Log Out</button>
+          :<Link to='/login' className="nav-link active text-white" aria-current="page" >Sign Up</Link>
+          }
+          
+        </li>
         </li>
       </ul>
     </div>

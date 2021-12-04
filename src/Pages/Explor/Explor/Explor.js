@@ -15,11 +15,19 @@ const Explor = () => {
                 <h2>Qualitypolarized <span>Man & Woman</span>Eyewear Sunglass</h2>
                 <p>Eye chasmish are very important for thos who have some diffucult in their eye to <br></br>see every hing clearly and perfectly</p>
             </div>
-            <div className="row row-cols-2 row-cols-lg-3 g-2 g-lg-3 w-75 m-auto">
-                {
-                    product.map(product => <ExplorList product={product}></ExplorList>)
-                }
-            </div>
+            {
+                product.length ===0 ? <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>:
+              <div className="row row-cols-2 row-cols-lg-3 g-2 g-lg-3 w-75 m-auto">
+              {
+                  product.map(product => <ExplorList product={product}></ExplorList>)
+              }
+          </div>
+            }
+            
         </div>
             
         </div>

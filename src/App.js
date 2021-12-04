@@ -7,6 +7,9 @@ import MakeAdmin from './Pages/Admin/MakeAdmin/MakeAdmin';
 import NavBar from './Pages/Home/NavBar/NavBar';
 import ReviewAdd from './Pages/Home/ReviewAdd/ReviewAdd';
 import Explor from './Pages/Explor/Explor/Explor';
+import About from './Pages/About/About/About';
+import Login from './Pages/LogIn/Login/Login';
+import Register from './Pages/LogIn/Register/Register';
 
 
 function App() {
@@ -34,6 +37,15 @@ function App() {
         </Route>
         <Route exact path='/explor'>
           <Explor></Explor>
+        </Route>
+        <Route exact path='/about'>
+          <About></About>
+        </Route>
+        <Route exact path='/login'>
+          <Login></Login>
+        </Route>
+        <Route exact path='/reg'>
+          <Register></Register>
         </Route>
       </Switch>
     </Router>
