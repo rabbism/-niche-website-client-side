@@ -10,6 +10,7 @@ import Explor from './Pages/Explor/Explor/Explor';
 import About from './Pages/About/About/About';
 import Login from './Pages/LogIn/Login/Login';
 import Register from './Pages/LogIn/Register/Register';
+import Caed from './Pages/Card/Caed';
 
 
 function App() {
@@ -46,6 +47,9 @@ function App() {
         </Route>
         <Route exact path='/reg'>
           <Register></Register>
+        </Route>
+        <Route exact path='/card'>
+          <Caed></Caed>
         </Route>
       </Switch>
     </Router>
