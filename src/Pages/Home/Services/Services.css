@@ -1,0 +1,12 @@
+.style-service{
+    background-image: url('https://template.hasthemes.com/chasmish/chasmish/img/bg/bg-image-6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+span{
+    font-size: 40px;
+    color: #e8604c;
+    line-height: 80px;
+    font-family: 'Reenie Beanie', cursive;
+}
