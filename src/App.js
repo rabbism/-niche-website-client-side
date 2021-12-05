@@ -11,6 +11,8 @@ import About from './Pages/About/About/About';
 import Login from './Pages/LogIn/Login/Login';
 import Register from './Pages/LogIn/Register/Register';
 import Caed from './Pages/Card/Caed';
+import MakeProduct from './Pages/Admin/MakeProduct/MakeProduct';
+import MangeAllProduct from './Pages/Admin/MangeAllProduct/MangeAllProduct';
 
 
 function App() {
@@ -50,6 +52,18 @@ function App() {
         </Route>
         <Route exact path='/card'>
           <Caed></Caed>
+        </Route>
+        <Route exact path='/addProduct'>
+          <MakeProduct></MakeProduct>
+        </Route>
+        <Route exact path='/addProduct'>
+          <MakeProduct></MakeProduct>
+        </Route>
+        <Route exact path='/makeAdmin'>
+          <MakeAdmin></MakeAdmin>
+        </Route>
+        <Route exact path='/manageAllProduct'>
+          <MangeAllProduct></MangeAllProduct>
         </Route>
       </Switch>
     </Router>

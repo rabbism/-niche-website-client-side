@@ -2,11 +2,14 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 
 const CardForm = () => {
-    const { register, handleSubmit } = useForm();
-  const onSubmit = data => console.log(data);
+    const { register, handleSubmit ,reset} = useForm();
+  const onSubmit = data =>{
+    console.log(data);
+    reset()
+  }
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <label for="exampleFormControlInput1" class="form-label">Your Name</label>
+        <label for="exampleFormControlInput1" class="form-label">Your Name</label>
         <input className='form-control' type="text" {...register("Name", { required: true, maxLength: 20 })} />
         <label for="exampleFormControlInput1" class="form-label">Email address</label>
         <input className='form-control' type="email" {...register("email")} />

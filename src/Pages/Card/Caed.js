@@ -1,5 +1,6 @@
 import React from 'react';
 import CardForm from './CardForm/CardForm';
+import Footer from './../Shared/Footer/Footer';
 
 const Caed = () => {
     return (
@@ -20,8 +21,10 @@ const Caed = () => {
       </div>
     </div>
   </div>
+  
 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

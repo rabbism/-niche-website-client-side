@@ -49,9 +49,9 @@ const NavBar = () => {
           <ul className="dropdown-menu mr-4" aria-labelledby="navbarDropdown">
             <li><Link className="dropdown-item" to="#">Expolor</Link></li>
             <li><Link className="dropdown-item" to="/makeAdmin">Make Admin</Link></li>
-            <li><Link className="dropdown-item" to="/makeAdmin">Manage Order</Link></li>
-            <li><Link className="dropdown-item" to="/makeAdmin">Manage Products</Link></li>
-            <li><Link className="dropdown-item" to="/makeAdmin">Add Product</Link></li>
+            <li><Link className="dropdown-item" to="/makeAdmin">Manage All Order</Link></li>
+            <li><Link className="dropdown-item" to="/manageAllProduct">Manage All Products</Link></li>
+            <li><Link className="dropdown-item" to="/addProduct">Add New Product</Link></li>
             <li><hr className="dropdown-divider"></hr></li>
             <li><Link className="dropdown-item" to="#">Log Out</Link></li>
             
